@@ -1,0 +1,178 @@
+//настраиваемые параметры хидера
+$header-height: 100px;
+$gamburger-size: 40px;
+
+//стили общие для любых разновидностей хидера
+.header__menu-list{
+	margin: 0;
+}
+
+.header {
+	position: fixed;
+	z-index: 9999;
+	width: 100%;
+	top: 0px;
+
+	&__inner {
+		width: 100%;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		box-sizing: border-box;
+		height: $header-height;
+	}
+
+	&__logo {
+		display: block;
+	}
+
+	&__menu-icon {
+		width: $gamburger-size;
+		height: $gamburger-size;
+		cursor: pointer;
+
+		@media (min-width: 1025px) {
+			display: none;
+		}
+
+		@media (max-width: 1024px) {
+			display: block;
+		}
+	}
+
+	&__menu-item{
+		list-style-type: none;
+		text-decoration: none;
+	}
+
+	a{
+		display: block;
+		text-decoration: none;
+		color: #000;
+	}
+}
+
+.headerClose {
+
+	.header__menu-list{
+		align-items:center;
+
+		@media (min-width: 1025px) {
+			display: flex;
+			flex-direction: row;
+		}
+
+		@media (max-width: 1024px) {
+			display: none;
+		}
+	}
+}
+
+.headerOpen {
+
+	.header__menu-list {
+		display: flex;
+		flex-direction: column;
+		position: fixed;
+		z-index: 9998;
+		box-sizing: border-box;
+		top: $header-height;
+	}
+}
+//**************************************************
+//пользовательские кастомные стили
+.header {
+
+	&__inner{
+
+		@media (min-width: 786px) {
+			padding: 0 10px 0 50px;
+		}
+
+		@media (max-width: 785px) {
+			padding: 0 10px 0 15px;
+		}
+	}
+
+
+	&__logo {
+		width: 192px;
+        height: 40px;
+        display: flex;
+        flex-direction: row;
+	}
+
+	&__flower{
+        width: 30px;
+        height: 30px;
+        margin-right: 8px;
+
+        & > *{
+            border: solid 1px #DAA520;
+            box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+        }
+    }
+
+    &__title{
+        font-weight: bold;
+        font-size: 24px;
+        font-family: Nunito-Regular;
+        letter-spacing: 0.25em;
+    }
+
+	&__menu-item{
+		font-size: 16px;
+        color: #222222;
+        font-family: Nunito-Regular;
+	}
+
+	&__home-item{
+        color: #DAA520;
+        font-weight: 800;
+        font-size: 16px;
+    }
+
+    &__signup-item{
+        width:137px;
+        border: solid 1px black;
+        line-height: 40px;
+        text-align: center;
+        border-radius: 10px;
+    }
+}
+
+.headerClose {
+
+	.header__menu-item{
+		margin-right: 15px;
+	}
+}
+
+.headerOpen {
+
+	.header__menu-list {
+		width: 100%;
+		left: 0px;
+		padding-top: 20px;
+		padding-left: 50px;
+		background-color: white;
+
+		.header__menu-item {
+			list-style-type: none;
+			margin-bottom: 20px;
+		}
+	}
+}
+//в этих стилях указываем оформление(цвета, фоны)
+.headerCloseBackground {
+	background-color: #fff;
+}
+
+.headerOpenBackground {
+	background-color: #fff;
+}
+
+.headerScrollBackground {
+	background-color: #fff;
+}
