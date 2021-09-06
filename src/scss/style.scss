@@ -475,6 +475,7 @@
     }
 
     &__empty-block{
+        display: block;
         width: 240px;
         height: 320px;
         border-radius: 30% 0;
@@ -557,32 +558,32 @@
             justify-content: space-between;
             flex-direction: row;
             margin-bottom: 23px;
+            margin-top: 10px;
 
             .button-prev{
+                display: flex;
+                justify-content: space-between;
+                flex-direction: row;
+                align-items: center;
                 width: 95px;
                 height: 19px;
                 font-weight: 600;
                 font-size: 14px;
                 font-family: Nunito-Regular;
                 cursor: pointer;
-
-                img{
-                    margin-right: 10px;
-                }
             }
 
             .button-next{
-                width: 95px;
+                display: flex;
+                justify-content: space-between;
+                flex-direction: row;
+                align-items: center;
+                width: 70px;
                 height: 19px;
                 font-weight: 600;
                 font-size: 14px;
                 font-family: Nunito-Regular;
                 cursor: pointer;
-
-                img{
-                    float: right;
-                    margin-top: 5px;
-                }
             }
         }
 
